@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G725" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Availability" representedClassName="Availability" syncable="YES">
+        <attribute name="dayOfWeek" optional="YES" attributeType="String"/>
+        <attribute name="minMembers" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="openingHour" optional="YES" attributeType="String"/>
+        <attribute name="shiftLength" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="availability" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="openingHours" inverseEntity="Team"/>
+    </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES">
+        <attribute name="identificador" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="temID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="managers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="managerTeam" inverseEntity="User"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="team" inverseEntity="User"/>
+        <relationship name="openingHours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Availability" inverseName="availability" inverseEntity="Availability"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="availability" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="identificador" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="maxHoursToWork" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="numero" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ratePerHour" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tipoUsuario" optional="YES" attributeType="String"/>
+        <relationship name="managerTeam" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="managers" inverseEntity="Team"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="members" inverseEntity="Team"/>
+    </entity>
+</model>
