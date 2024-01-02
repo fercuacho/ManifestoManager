@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-4p-sVt">
-                                <rect key="frame" x="157" y="640" width="78" height="35"/>
+                                <rect key="frame" x="120" y="640" width="150" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -159,7 +159,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Update information"/>
                                 <connections>
-                                    <action selector="logOutBtn:" destination="uz9-8d-zbc" eventType="touchUpInside" id="Kbd-Gg-rjP"/>
+                                    <action selector="updateInfoBtn:" destination="uz9-8d-zbc" eventType="touchUpInside" id="ftf-Wp-Jw4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -169,7 +169,7 @@
                             <constraint firstItem="7Vo-Hd-PcP" firstAttribute="top" secondItem="Udp-Mc-nX4" secondAttribute="bottom" constant="15" id="4px-Dm-eVF"/>
                             <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="ech-2n-Xbd" secondAttribute="trailing" constant="80" id="6jf-8R-2BS"/>
                             <constraint firstItem="ech-2n-Xbd" firstAttribute="top" secondItem="g99-EN-XzY" secondAttribute="bottom" constant="15" id="B9j-jL-Nri"/>
-                            <constraint firstItem="HoF-4p-sVt" firstAttribute="leading" secondItem="ENj-gH-sd5" secondAttribute="leading" constant="157" id="Lfd-Fj-IWW"/>
+                            <constraint firstItem="HoF-4p-sVt" firstAttribute="leading" secondItem="ENj-gH-sd5" secondAttribute="leading" constant="120" id="Lfd-Fj-IWW"/>
                             <constraint firstItem="g99-EN-XzY" firstAttribute="top" secondItem="wzC-PF-4rh" secondAttribute="bottom" constant="40" id="QKN-SP-YCJ"/>
                             <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="dAA-nK-dLH" secondAttribute="trailing" constant="100" id="SOz-O1-EwI"/>
                             <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="Udp-Mc-nX4" secondAttribute="trailing" constant="80" id="TEz-U6-dh4"/>
@@ -181,7 +181,7 @@
                             <constraint firstItem="HoF-4p-sVt" firstAttribute="top" secondItem="dAA-nK-dLH" secondAttribute="bottom" constant="50" id="ce6-WP-SKp"/>
                             <constraint firstItem="ech-2n-Xbd" firstAttribute="leading" secondItem="ENj-gH-sd5" secondAttribute="leading" constant="80" id="cy7-1V-9Ea"/>
                             <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="g99-EN-XzY" secondAttribute="trailing" constant="80" id="eMT-ou-p6t"/>
-                            <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="HoF-4p-sVt" secondAttribute="trailing" constant="155" id="g4G-F9-N5A"/>
+                            <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="HoF-4p-sVt" secondAttribute="trailing" constant="120" id="g4G-F9-N5A"/>
                             <constraint firstItem="dAA-nK-dLH" firstAttribute="leading" secondItem="ENj-gH-sd5" secondAttribute="leading" constant="100" id="gIi-QH-YRq"/>
                             <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="wzC-PF-4rh" secondAttribute="trailing" constant="75" id="hf5-mv-OgE"/>
                             <constraint firstItem="ENj-gH-sd5" firstAttribute="trailing" secondItem="7Vo-Hd-PcP" secondAttribute="trailing" constant="80" id="hoy-Te-fNn"/>
@@ -190,6 +190,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="67X-W2-Z5u"/>
+                    <connections>
+                        <outlet property="emailUser" destination="7Vo-Hd-PcP" id="XlG-Nj-PHL"/>
+                        <outlet property="nameUser" destination="g99-EN-XzY" id="z7r-V5-Zs7"/>
+                        <outlet property="numberUser" destination="Udp-Mc-nX4" id="IyJ-XL-GC2"/>
+                        <outlet property="profileImage" destination="wzC-PF-4rh" id="YjU-1u-mzV"/>
+                        <outlet property="surnameUser" destination="ech-2n-Xbd" id="glL-1N-cbJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcR-Et-r0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,8 +228,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="130.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CHO-KD-Efk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="130.33333333333334"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CHO-KD-Efk">
+                                                    <rect key="frame" x="0.0" y="1.9999999999999929" width="120" height="127"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="130" id="KHr-gf-uct"/>
                                                         <constraint firstAttribute="width" constant="120" id="n4e-Md-IjI"/>
@@ -317,8 +325,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="120.33333587646484"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-4T-4ks">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="120.33333333333333"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-4T-4ks">
+                                                    <rect key="frame" x="0.0" y="2" width="130" height="117"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="130" id="0KE-xV-xNw"/>
                                                         <constraint firstAttribute="height" constant="120" id="gzz-dL-5IU"/>
@@ -980,7 +989,7 @@
                                     <action selector="saveAvailabilityBtn:" destination="61w-J2-iH7" eventType="touchUpInside" id="NHh-e7-8GQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-5v-QG0">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-5v-QG0">
                                 <rect key="frame" x="154" y="702" width="83" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ver lista"/>
@@ -1074,7 +1083,7 @@
                                     <segue destination="61w-J2-iH7" kind="show" identifier="openCalendarSegue" id="vo2-MM-vzx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pog-SM-jLv">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pog-SM-jLv">
                                 <rect key="frame" x="154" y="599" width="83" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="ver disponibilidad"/>
@@ -1224,6 +1233,7 @@
     </scenes>
     <resources>
         <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
+        <image name="person.2.fill" catalog="system" width="128" height="81"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>

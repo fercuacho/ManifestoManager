@@ -58,27 +58,70 @@ class CreateManagerAccountViewController: UIViewController,  UITextFieldDelegate
     
     
     @IBAction func createManagerAccount(_ sender: Any) {
-        
-        manager = User(context: self.context)
-        manager?.name = nameTxf.text
-        manager?.lastname = surnameTxf.text
-        manager?.numero = numberTxf.text
-        manager?.email = emailTxf.text
-        manager?.password = passwordTxf.text
-        let uniqueIdentifier = UUID()
-        manager?.identificador = uniqueIdentifier
-        
-        let uniqueString = manager?.identificador?.uuidString
-        UserDefaults.standard.set(uniqueString, forKey: "identificador")
-        print("IDENTIFICADOR: ", uniqueString ?? "no id")
-        
-        //Save the data
-        do{
-            try self.context.save()
+        if validateFields(){
+            manager = User(context: self.context)
+            manager?.name = nameTxf.text
+            manager?.lastname = surnameTxf.text
+            manager?.numero = numberTxf.text
+            manager?.email = emailTxf.text
+            manager?.password = passwordTxf.text
+            manager?.tipoUsuario = "manager"
+            let uniqueIdentifier = UUID()
+            manager?.identificador = uniqueIdentifier
+            
+            let uniqueString = manager?.identificador?.uuidString
+            UserDefaults.standard.set(uniqueString, forKey: "identificador")
+            print("IDENTIFICADOR: ", uniqueString ?? "no id")
+            
+            //Save the data
+            do{
+                try self.context.save()
+            }
+            catch{
+            }
         }
-        catch{
+    }
+    
+    func validateFields() -> Bool {
+        
+        // Name
+        guard let name = nameTxf.text, !name.isEmpty else {
+            showAlert(message: "Don't forget entering your name.")
+            return false
         }
         
+        // Surname
+        guard let surname = surnameTxf.text, !surname.isEmpty else {
+            showAlert(message: "Don't forget entering your surname")
+            return false
+        }
+        
+        guard let number = numberTxf.text, !number.isEmpty else {
+            showAlert(message: "Por favor, ingresa tu correo electrónico.")
+            return false
+        }
+        
+        // Verificar si el campo de correo electrónico está vacío
+        guard let email = emailTxf.text, !email.isEmpty else {
+            showAlert(message: "Enter your email.")
+            return false
+        }
+        
+        // Verificar si el campo de contraseña está vacío
+        guard let password = passwordTxf.text, !password.isEmpty else {
+            showAlert(message: "Enter your password.")
+            return false
+        }
+ 
+        // Todos los campos están llenos
+        return true
+    }
+
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Alerta", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

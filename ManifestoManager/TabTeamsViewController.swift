@@ -86,9 +86,6 @@ class TabTeamsViewController: UIViewController {
 
         }
         
-        
-        label.text = manager?.name
-        
         teamsTable.delegate = self
         teamsTable.dataSource = self
         

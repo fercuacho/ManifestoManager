@@ -25,63 +25,82 @@ class CreateFirstTeamViewController: UIViewController {
     
 
     @IBAction func createFirstTeam(_ sender: Any) {
-        
-        if (teamNameTxf.text != nil){
-            
-            firstTeam = Team(context: self.context)
-            firstTeam?.name = teamNameTxf.text
-            
-            self.managerRecived?.team = firstTeam
-            
-            //if let currentMembers = self.firstTeam?.members as? Set<User> {
-            //    managerRecived?.position = Int64(currentMembers.count)
-            //}
-            
-            if let team = firstTeam {
-                self.managerRecived?.managerTeam = NSSet(object: team)
-            }
-
-            //Save the data
-            do{
-                try self.context.save()
-            }
-            catch{
+        if validateFields(){
+            if (teamNameTxf.text != nil){
                 
-            }
-            
-            if let managers = firstTeam?.managers {
-                for mana in managers {
-                    if let manager = mana as? User {
-                        print("el nombre de tu team: ", firstTeam?.name ?? "name team")
-                        
-                        print("Es: ", manager.name ?? "no name")
-                    }
+                firstTeam = Team(context: self.context)
+                firstTeam?.name = teamNameTxf.text
+                
+                self.managerRecived?.team = firstTeam
+                
+                //if let currentMembers = self.firstTeam?.members as? Set<User> {
+                //    managerRecived?.position = Int64(currentMembers.count)
+                //}
+                
+                if let team = firstTeam {
+                    self.managerRecived?.managerTeam = NSSet(object: team)
                 }
-            } else {
-                print("El conjunto de managers es nulo")
-            }
-            
-            
-            //performSegue(withIdentifier: "firstTeamSegue", sender: self)
-
-            /*
-            if let tabBarVC = storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? TabBarController {
-                   // Configura los controladores de vista que estarán dentro de las pestañas del UITabBarController
-                   let Teams = TabTeamsViewController()
-                   let Profile = TabProfileViewController()
-
-                   tabBarVC.setViewControllers([Teams, Profile], animated: false)
                 
-                //tabBarVC.dataToPass = ["firstTeam":firstTeam!, "manager":managerRecived!]
-
-                   // Realiza la transición sin mostrar el botón de retroceso y sin presentar modalmente
-                   navigationController?.setViewControllers([tabBarVC], animated: true)
-               }
-            */
-        }else {
-            
+                //Save the data
+                do{
+                    try self.context.save()
+                }
+                catch{
+                    
+                }
+                
+                if let managers = firstTeam?.managers {
+                    for mana in managers {
+                        if let manager = mana as? User {
+                            print("el nombre de tu team: ", firstTeam?.name ?? "name team")
+                            
+                            print("Es: ", manager.name ?? "no name")
+                        }
+                    }
+                } else {
+                    print("El conjunto de managers es nulo")
+                }
+                
+                
+                //performSegue(withIdentifier: "firstTeamSegue", sender: self)
+                
+                /*
+                 if let tabBarVC = storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? TabBarController {
+                 // Configura los controladores de vista que estarán dentro de las pestañas del UITabBarController
+                 let Teams = TabTeamsViewController()
+                 let Profile = TabProfileViewController()
+                 
+                 tabBarVC.setViewControllers([Teams, Profile], animated: false)
+                 
+                 //tabBarVC.dataToPass = ["firstTeam":firstTeam!, "manager":managerRecived!]
+                 
+                 // Realiza la transición sin mostrar el botón de retroceso y sin presentar modalmente
+                 navigationController?.setViewControllers([tabBarVC], animated: true)
+                 }
+                 */
+            }else {
+                
+            }
         }
-            
+    }
+    
+    func validateFields() -> Bool {
+        
+        // Name
+        guard let name = teamNameTxf.text, !name.isEmpty else {
+            showAlert(message: "Enter your team's name.")
+            return false
+        }
+ 
+        // Todos los campos están llenos
+        return true
+    }
+
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Alerta", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
