@@ -30,7 +30,11 @@ class TeamDetailViewController: UIViewController {
             let newMember = User(context: self.context)
             newMember.name = textfield.text
         
+            let uniqueIdentifier = UUID()
+            newMember.identificador = uniqueIdentifier
+            
             newMember.team = self.teamRecived
+            
             
             if let currentMembers = self.teamRecived?.members as? Set<User> {
                 newMember.position = Int64(currentMembers.count)
@@ -63,6 +67,7 @@ class TeamDetailViewController: UIViewController {
                 
         teamNameLabel.text = teamRecived?.name
         
+        
         membersTable.dataSource = self
         membersTable.delegate = self
         
@@ -71,9 +76,6 @@ class TeamDetailViewController: UIViewController {
     }
     
     func fetchMembers() {
-        guard let team = teamRecived else {
-            return
-        }
 
         do {
             // Crear una solicitud de recuperación para los miembros del equipo específico
@@ -135,7 +137,7 @@ extension TeamDetailViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        var lengthTeam = self.teamRecived?.members?.count
+        let lengthTeam = self.teamRecived?.members?.count
         return lengthTeam ?? 0
     }
     
@@ -143,27 +145,12 @@ extension TeamDetailViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath) as! MemberCellTableViewCell
                 
-        //if let team = self.teamRecived, let members = team.members as? Set<User> {
-        //if let members = self.teamRecived?.members as? Set<User> {
-        //if let members = getMembers(team: teamRecived ?? Team()) {
-
-               //let member = Array(members)[indexPath.row]
-               
-               // Ahora 'member' contiene la instancia del usuario para la celda actual
-               // Puedes acceder a las propiedades del usuario y configurar la celda
-        //guard let members = getMembers(team: teamRecived ?? Team()), !members.isEmpty else {
-                // Manejar el caso en el que no hay miembros
-          //      return cell
-            //}
-
-            //let member = members[indexPath.row]
-            //cell.memberNameLabel.text = member.name
         let members = getMembers(team: teamRecived ?? Team())
             
             if !members.isEmpty {
                 let member = members[indexPath.row]
                 cell.memberNameLabel.text = member.name
-                // Otras configuraciones de la celda según sea necesario
+                
             }
         
            return cell
@@ -196,8 +183,7 @@ extension TeamDetailViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //if let members = self.teamRecived?.members as? Set<User> {
-          //  let member = Array(members)[indexPath.row]
+       
         let members = getMembers(team: teamRecived ?? Team())
             
             if !members.isEmpty {

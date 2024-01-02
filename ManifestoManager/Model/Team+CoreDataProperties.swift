@@ -2,7 +2,7 @@
 //  Team+CoreDataProperties.swift
 //  ManifestoManager
 //
-//  Created by José Fernando Cristóbal Huerta on 30/12/23.
+//  Created by José Fernando Cristóbal Huerta on 01/01/24.
 //
 //
 

@@ -9,6 +9,10 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    //var firstTeam: Team?
+    //var manager: User?
+    var dataToPass: [String: Any]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

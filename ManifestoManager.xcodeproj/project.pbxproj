@@ -9,16 +9,13 @@
 /* Begin PBXBuildFile section */
 		F2355D5E2B40DC3500B7BF56 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = F2355D5D2B40DC3500B7BF56 /* FSCalendar */; };
 		F28EB56B2B3F226B00EA29E4 /* OpeningHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB56A2B3F226B00EA29E4 /* OpeningHoursViewController.swift */; };
-		F28EB5722B40872A00EA29E4 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB56C2B40872A00EA29E4 /* User+CoreDataClass.swift */; };
-		F28EB5732B40872A00EA29E4 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB56D2B40872A00EA29E4 /* User+CoreDataProperties.swift */; };
-		F28EB5742B40872A00EA29E4 /* Availability+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB56E2B40872A00EA29E4 /* Availability+CoreDataClass.swift */; };
-		F28EB5752B40872A00EA29E4 /* Availability+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB56F2B40872A00EA29E4 /* Availability+CoreDataProperties.swift */; };
-		F28EB5762B40872A00EA29E4 /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB5702B40872A00EA29E4 /* Team+CoreDataClass.swift */; };
-		F28EB5772B40872A00EA29E4 /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB5712B40872A00EA29E4 /* Team+CoreDataProperties.swift */; };
 		F28EB5792B4092D800EA29E4 /* UserAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EB5782B4092D800EA29E4 /* UserAvailabilityViewController.swift */; };
 		F293B76A2B4195DA0084474E /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293B7692B4195DA0084474E /* MemberDetailViewController.swift */; };
 		F293BC8A2B41E7C100FF7E3C /* TeamScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293BC892B41E7C100FF7E3C /* TeamScheduleViewController.swift */; };
 		F293BC8C2B42073A00FF7E3C /* ScheduleCellShiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293BC8B2B42073A00FF7E3C /* ScheduleCellShiftTableViewCell.swift */; };
+		F293BC8E2B42490300FF7E3C /* CreateManagerAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293BC8D2B42490300FF7E3C /* CreateManagerAccountViewController.swift */; };
+		F293BC902B435FBA00FF7E3C /* CreateFirstTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293BC8F2B435FBA00FF7E3C /* CreateFirstTeamViewController.swift */; };
+		F293BCAA2B4392FE00FF7E3C /* TabProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293BCA92B4392FE00FF7E3C /* TabProfileViewController.swift */; };
 		F299CB0B2B303834009282BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299CB0A2B303834009282BF /* AppDelegate.swift */; };
 		F299CB0D2B303834009282BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299CB0C2B303834009282BF /* SceneDelegate.swift */; };
 		F299CB0F2B303834009282BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299CB0E2B303834009282BF /* ViewController.swift */; };
@@ -29,6 +26,12 @@
 		F29B987F2B3324E300E05636 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B987E2B3324E300E05636 /* TabBarController.swift */; };
 		F29B98812B332A1500E05636 /* TabTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B98802B332A1500E05636 /* TabTeamsViewController.swift */; };
 		F29B98832B332F5700E05636 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B98822B332F5700E05636 /* LoginViewController.swift */; };
+		F2B303A62B43A4A800D882C3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B303A02B43A4A800D882C3 /* User+CoreDataClass.swift */; };
+		F2B303A72B43A4A800D882C3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B303A12B43A4A800D882C3 /* User+CoreDataProperties.swift */; };
+		F2B303A82B43A4A800D882C3 /* Availability+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B303A22B43A4A800D882C3 /* Availability+CoreDataClass.swift */; };
+		F2B303A92B43A4A800D882C3 /* Availability+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B303A32B43A4A800D882C3 /* Availability+CoreDataProperties.swift */; };
+		F2B303AA2B43A4A800D882C3 /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B303A42B43A4A800D882C3 /* Team+CoreDataClass.swift */; };
+		F2B303AB2B43A4A800D882C3 /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B303A52B43A4A800D882C3 /* Team+CoreDataProperties.swift */; };
 		F2B656A72B3B6124004CC514 /* TeamCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B656A62B3B6124004CC514 /* TeamCellTableViewCell.swift */; };
 		F2B656A92B3C6EED004CC514 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B656A82B3C6EED004CC514 /* TeamDetailViewController.swift */; };
 		F2B656AB2B3D9BB1004CC514 /* MemberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B656AA2B3D9BB1004CC514 /* MemberCellTableViewCell.swift */; };
@@ -36,16 +39,13 @@
 
 /* Begin PBXFileReference section */
 		F28EB56A2B3F226B00EA29E4 /* OpeningHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningHoursViewController.swift; sourceTree = "<group>"; };
-		F28EB56C2B40872A00EA29E4 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F28EB56D2B40872A00EA29E4 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F28EB56E2B40872A00EA29E4 /* Availability+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Availability+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F28EB56F2B40872A00EA29E4 /* Availability+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Availability+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F28EB5702B40872A00EA29E4 /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F28EB5712B40872A00EA29E4 /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F28EB5782B4092D800EA29E4 /* UserAvailabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvailabilityViewController.swift; sourceTree = "<group>"; };
 		F293B7692B4195DA0084474E /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
 		F293BC892B41E7C100FF7E3C /* TeamScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScheduleViewController.swift; sourceTree = "<group>"; };
 		F293BC8B2B42073A00FF7E3C /* ScheduleCellShiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellShiftTableViewCell.swift; sourceTree = "<group>"; };
+		F293BC8D2B42490300FF7E3C /* CreateManagerAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateManagerAccountViewController.swift; sourceTree = "<group>"; };
+		F293BC8F2B435FBA00FF7E3C /* CreateFirstTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFirstTeamViewController.swift; sourceTree = "<group>"; };
+		F293BCA92B4392FE00FF7E3C /* TabProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabProfileViewController.swift; sourceTree = "<group>"; };
 		F299CB072B303834009282BF /* ManifestoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManifestoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F299CB0A2B303834009282BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F299CB0C2B303834009282BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +58,12 @@
 		F29B987E2B3324E300E05636 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F29B98802B332A1500E05636 /* TabTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTeamsViewController.swift; sourceTree = "<group>"; };
 		F29B98822B332F5700E05636 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2B303A02B43A4A800D882C3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2B303A12B43A4A800D882C3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F2B303A22B43A4A800D882C3 /* Availability+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Availability+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2B303A32B43A4A800D882C3 /* Availability+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Availability+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F2B303A42B43A4A800D882C3 /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2B303A52B43A4A800D882C3 /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F2B656A62B3B6124004CC514 /* TeamCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCellTableViewCell.swift; sourceTree = "<group>"; };
 		F2B656A82B3C6EED004CC514 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		F2B656AA2B3D9BB1004CC514 /* MemberCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 				F28EB56A2B3F226B00EA29E4 /* OpeningHoursViewController.swift */,
 				F28EB5782B4092D800EA29E4 /* UserAvailabilityViewController.swift */,
 				F293BC8B2B42073A00FF7E3C /* ScheduleCellShiftTableViewCell.swift */,
+				F293BC8D2B42490300FF7E3C /* CreateManagerAccountViewController.swift */,
+				F293BC8F2B435FBA00FF7E3C /* CreateFirstTeamViewController.swift */,
+				F293BCA92B4392FE00FF7E3C /* TabProfileViewController.swift */,
 			);
 			path = ManifestoManager;
 			sourceTree = "<group>";
@@ -121,12 +130,12 @@
 		F299CB2D2B30648C009282BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F28EB56C2B40872A00EA29E4 /* User+CoreDataClass.swift */,
-				F28EB56D2B40872A00EA29E4 /* User+CoreDataProperties.swift */,
-				F28EB56E2B40872A00EA29E4 /* Availability+CoreDataClass.swift */,
-				F28EB56F2B40872A00EA29E4 /* Availability+CoreDataProperties.swift */,
-				F28EB5702B40872A00EA29E4 /* Team+CoreDataClass.swift */,
-				F28EB5712B40872A00EA29E4 /* Team+CoreDataProperties.swift */,
+				F2B303A02B43A4A800D882C3 /* User+CoreDataClass.swift */,
+				F2B303A12B43A4A800D882C3 /* User+CoreDataProperties.swift */,
+				F2B303A22B43A4A800D882C3 /* Availability+CoreDataClass.swift */,
+				F2B303A32B43A4A800D882C3 /* Availability+CoreDataProperties.swift */,
+				F2B303A42B43A4A800D882C3 /* Team+CoreDataClass.swift */,
+				F2B303A52B43A4A800D882C3 /* Team+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,26 +217,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F293BCAA2B4392FE00FF7E3C /* TabProfileViewController.swift in Sources */,
 				F29B987F2B3324E300E05636 /* TabBarController.swift in Sources */,
 				F293B76A2B4195DA0084474E /* MemberDetailViewController.swift in Sources */,
+				F2B303A62B43A4A800D882C3 /* User+CoreDataClass.swift in Sources */,
 				F2B656AB2B3D9BB1004CC514 /* MemberCellTableViewCell.swift in Sources */,
-				F28EB5742B40872A00EA29E4 /* Availability+CoreDataClass.swift in Sources */,
-				F28EB5722B40872A00EA29E4 /* User+CoreDataClass.swift in Sources */,
 				F28EB56B2B3F226B00EA29E4 /* OpeningHoursViewController.swift in Sources */,
 				F299CB0F2B303834009282BF /* ViewController.swift in Sources */,
 				F2B656A72B3B6124004CC514 /* TeamCellTableViewCell.swift in Sources */,
 				F299CB0B2B303834009282BF /* AppDelegate.swift in Sources */,
+				F2B303A82B43A4A800D882C3 /* Availability+CoreDataClass.swift in Sources */,
 				F299CB152B303834009282BF /* ManifestoManager.xcdatamodeld in Sources */,
-				F28EB5752B40872A00EA29E4 /* Availability+CoreDataProperties.swift in Sources */,
 				F299CB0D2B303834009282BF /* SceneDelegate.swift in Sources */,
 				F2B656A92B3C6EED004CC514 /* TeamDetailViewController.swift in Sources */,
-				F28EB5772B40872A00EA29E4 /* Team+CoreDataProperties.swift in Sources */,
-				F28EB5732B40872A00EA29E4 /* User+CoreDataProperties.swift in Sources */,
 				F293BC8C2B42073A00FF7E3C /* ScheduleCellShiftTableViewCell.swift in Sources */,
 				F29B98832B332F5700E05636 /* LoginViewController.swift in Sources */,
 				F293BC8A2B41E7C100FF7E3C /* TeamScheduleViewController.swift in Sources */,
-				F28EB5762B40872A00EA29E4 /* Team+CoreDataClass.swift in Sources */,
+				F2B303AA2B43A4A800D882C3 /* Team+CoreDataClass.swift in Sources */,
 				F28EB5792B4092D800EA29E4 /* UserAvailabilityViewController.swift in Sources */,
+				F2B303AB2B43A4A800D882C3 /* Team+CoreDataProperties.swift in Sources */,
+				F293BC902B435FBA00FF7E3C /* CreateFirstTeamViewController.swift in Sources */,
+				F293BC8E2B42490300FF7E3C /* CreateManagerAccountViewController.swift in Sources */,
+				F2B303A72B43A4A800D882C3 /* User+CoreDataProperties.swift in Sources */,
+				F2B303A92B43A4A800D882C3 /* Availability+CoreDataProperties.swift in Sources */,
 				F29B98812B332A1500E05636 /* TabTeamsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

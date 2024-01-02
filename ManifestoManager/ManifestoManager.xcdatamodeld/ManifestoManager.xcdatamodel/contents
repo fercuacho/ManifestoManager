@@ -28,7 +28,7 @@
         <attribute name="position" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="ratePerHour" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="tipoUsuario" optional="YES" attributeType="String"/>
-        <relationship name="managerTeam" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="managers" inverseEntity="Team"/>
+        <relationship name="managerTeam" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="managers" inverseEntity="Team"/>
         <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="members" inverseEntity="Team"/>
     </entity>
 </model>
